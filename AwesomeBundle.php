@@ -2,6 +2,7 @@
 
 namespace Marcelmc\AwesomeBundle;
 
+use Marcelmc\AwesomeBundle\DependencyInjection\MarcelmcAwesomeExtension;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\DependencyInjection\Compiler\PassConfig;
 use Symfony\Component\HttpKernel\Bundle\Bundle;
@@ -19,5 +20,9 @@ class AwesomeBundle extends Bundle
      */
     public function build(ContainerBuilder $container)
     {
+    }
+    public function getContainerExtension()
+    {
+        return new MarcelmcAwesomeExtension();
     }
 }
