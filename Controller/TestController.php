@@ -1,14 +1,5 @@
 <?php
 
-/*
- * This file is part of the FOSRestBundle package.
- *
- * (c) FriendsOfSymfony <http://friendsofsymfony.github.com/>
- *
- * For the full copyright and license information, please view the LICENSE
- * file that was distributed with this source code.
- */
-
 namespace Marcelmc\AwesomeBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
@@ -16,8 +7,8 @@ use FOS\RestBundle\Controller\Annotations\Get;
 use FOS\RestBundle\Controller\FOSRestController;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Security;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\IsGranted;
-use App\Entity\Company;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\ParamConverter;
+use Doctrine\Common\Persistence\ObjectManager;
 
 /**
  * Controllers using the View functionality of FOSRestBundle.
@@ -29,10 +20,8 @@ class TestController extends FOSRestController
     /**
      * GET Get edeclaration list.
      * @Get("/v2/test-bundle/{company}")
-     * @ParamConverter("company")
-     * @Security("is_granted('COMPANY_ROLE', {company: company, roles: ['COMPANY_ROLE_USER', 'COMPANY_ROLE_ADMIN', 'COMPANY_ROLE_ACCOUNTANT']})")
      */
-    public function getListAction(Company $company)
+    public function getListAction(ObjectManager $objectManager)
     {
         return '213';
     }
