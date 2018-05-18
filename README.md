@@ -1,1 +1,1 @@
-testBundle
+AwesomeBundle

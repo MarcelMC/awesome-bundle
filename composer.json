@@ -1,27 +1,19 @@
 {
-    "name": "test-bundle",
+    "name": "marcelmc/awesome-bundle",
     "type": "symfony-bundle",
-    "description": "This Bundle provides various tools to rapidly develop RESTful API's with Symfony",
-    "keywords": ["test"],
-    "homepage": "http://friendsofsymfony.github.com",
+    "description": "This Bundle is test",
+    "keywords": ["awesome"],
+    "homepage": "http://marcelmc.github.com",
     "license": "MIT",
     "authors": [
         {
-            "name": "Lukas Kahwe Smith",
-            "email": "smith@pooteeweet.org"
-        },
-        {
-            "name": "Konstantin Kudryashov",
-            "email": "ever.zet@gmail.com"
-        },
-        {
-            "name": "FriendsOfSymfony Community",
-            "homepage": "https://github.com/friendsofsymfony/FOSRestBundle/contributors"
+            "name": "MarcelMC",
+            "email": "mail@mail.org"
         }
     ],
     "autoload":{
         "psr-4":{
-            "TestBundle\\": ""
+            "Marcelmc\\AwesomeBundle\\": ""
         },
         "exclude-from-classmap": [
             "Tests/"
