@@ -28,7 +28,7 @@ abstract class TestController extends FOSRestController
      */
     public function getListAction()
     {
-        return 'ghrebregre';
+        return '213';
     }
 
 }
