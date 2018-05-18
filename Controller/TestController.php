@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace PkoBundle\Controller;
+namespace TestBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use FOS\RestBundle\Controller\Annotations\Get;

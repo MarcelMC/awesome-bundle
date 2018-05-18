@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace PkoBundle;
+namespace TestBundle;
 
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 
@@ -17,7 +17,7 @@ use Symfony\Component\HttpKernel\Bundle\Bundle;
  * @author Lukas Kahwe Smith <smith@pooteeweet.org>
  * @author Eriksen Costa <eriksencosta@gmail.com>
  */
-class PkoBundle extends Bundle
+class TestBundle extends Bundle
 {
     const ZONE_ATTRIBUTE = '_pko_zone';
 
