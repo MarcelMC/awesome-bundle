@@ -12,6 +12,7 @@
 namespace PkoBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use FOS\RestBundle\Controller\Annotations\Get;
 
 /**
  * Controllers using the View functionality of FOSRestBundle.
@@ -21,25 +22,12 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 abstract class TestController extends Controller
 {
     /**
-     * Matches /blog exactly
-     *
-     * @Route("/blog", name="blog_list")
+     * GET Get edeclaration list.
+     * @Get("/v2/test-bundle")
      */
-    public function list()
+    public function getListAction()
     {
-        // ...
+        return true;
     }
 
-    /**
-     * Matches /blog/*
-     *
-     * @Route("/blog/{slug}", name="blog_show")
-     */
-    public function show($slug)
-    {
-        // $slug will equal the dynamic part of the URL
-        // e.g. at /blog/yay-routing, then $slug='yay-routing'
-
-        // ...
-    }
 }
