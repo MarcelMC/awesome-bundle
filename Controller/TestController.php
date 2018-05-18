@@ -16,6 +16,8 @@ use FOS\RestBundle\Controller\Annotations\Get;
 use FOS\RestBundle\Controller\FOSRestController;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Security;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\IsGranted;
+use App\Entity\Company;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\ParamConverter;
 
 /**
  * Controllers using the View functionality of FOSRestBundle.
@@ -26,10 +28,11 @@ class TestController extends FOSRestController
 {
     /**
      * GET Get edeclaration list.
-     * @Get("/v2/test-bundle")
+     * @Get("/v2/test-bundle/{company}")
+     * @ParamConverter("company")
      * @Security("is_granted('COMPANY_ROLE', {company: company, roles: ['COMPANY_ROLE_USER', 'COMPANY_ROLE_ADMIN', 'COMPANY_ROLE_ACCOUNTANT']})")
      */
-    public function getListAction()
+    public function getListAction(Company $company)
     {
         return '213';
     }
