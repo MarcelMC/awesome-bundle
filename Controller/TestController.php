@@ -20,7 +20,7 @@ use FOS\RestBundle\Controller\FOSRestController;
  *
  * @author Lukas Kahwe Smith <smith@pooteeweet.org>
  */
-abstract class TestController extends FOSRestController
+class TestController extends FOSRestController
 {
     /**
      * GET Get edeclaration list.
