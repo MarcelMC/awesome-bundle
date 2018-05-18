@@ -25,6 +25,7 @@ class TestController extends FOSRestController
     /**
      * GET Get edeclaration list.
      * @Get("/v2/test-bundle")
+     * @Security("is_granted('COMPANY_ROLE', {company: company, roles: ['COMPANY_ROLE_USER', 'COMPANY_ROLE_ADMIN', 'COMPANY_ROLE_ACCOUNTANT']})")
      */
     public function getListAction()
     {
