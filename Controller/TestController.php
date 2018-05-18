@@ -18,12 +18,28 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
  *
  * @author Lukas Kahwe Smith <smith@pooteeweet.org>
  */
-abstract class PkoController extends Controller
+abstract class TestController extends Controller
 {
-    use ControllerTrait;
-
-    protected function getTest()
+    /**
+     * Matches /blog exactly
+     *
+     * @Route("/blog", name="blog_list")
+     */
+    public function list()
     {
-	return true;
+        // ...
+    }
+
+    /**
+     * Matches /blog/*
+     *
+     * @Route("/blog/{slug}", name="blog_show")
+     */
+    public function show($slug)
+    {
+        // $slug will equal the dynamic part of the URL
+        // e.g. at /blog/yay-routing, then $slug='yay-routing'
+
+        // ...
     }
 }
