@@ -10,4 +10,4 @@ services:
 
     App\:
         resource: '../Utils/*'
-        exclude: '../src/{Entity,Migrations,Tests,Kernel.php}'
+        #exclude: '../src/{Entity,Migrations,Tests,Kernel.php}'
