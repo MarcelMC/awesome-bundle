@@ -8,6 +8,6 @@ services:
         autoconfigure: true # Automatically registers your services as commands, event subscribers, etc.
         public: false
 
-    App\:
-        resource: '../Utils/*'
+    Marcelmc\AwesomeBundle\:
+        resource: '../../*'
         #exclude: '../src/{Entity,Migrations,Tests,Kernel.php}'
