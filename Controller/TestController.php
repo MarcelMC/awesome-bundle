@@ -10,6 +10,7 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\IsGranted;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\ParamConverter;
 use Doctrine\Common\Persistence\ObjectManager;
 use Monolog\Formatter\JsonFormatter;
+use Marcelmc\AwesomeBundle\Utils\TestService;
 
 /**
  * Controllers using the View functionality of FOSRestBundle.
@@ -19,7 +20,7 @@ use Monolog\Formatter\JsonFormatter;
 class TestController extends FOSRestController
 {
 
-    public function __construct(JsonFormatter $jsonFormatter)
+    public function __construct(TestService $testService)
     {
         echo 'test';
     }

@@ -5,7 +5,7 @@
     xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
     <services>
         <service id="awesome.formatter.json" class="Monolog\Formatter\JsonFormatter" public="true" autowire="true" />
-        <service class="Marcelmc\AwesomeBundle\Controller\TestController" public="true">
+        <service id="awesome.controller.test" class="Marcelmc\AwesomeBundle\Controller\TestController" public="true">
             <argument type="service" id="awesome.formatter.json" />
         </service>
     </services>
